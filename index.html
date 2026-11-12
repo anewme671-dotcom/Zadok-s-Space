@@ -9,12 +9,15 @@
 </head>
 
 <body>
+  
+  <div class="avatar">Z</div>
+  
   <h1>Zadok</h1>
   
   <div class="quote-box">
     <h2>Verse of the Day</h2>
-    <p>"For though the righteous fall Seven times, the rise again."</p>
-    <p>- Proverbs 24:16</p>
+    <p id="verse-text">"For though the righteous fall Seven times, they rise again."</p>
+    <p id="verse-ref">- Proverbs 24:16</p>
   </div>
   <p class="about-text">
     Resetting, refocusing, and rebuilding. 
@@ -23,10 +26,46 @@
 </p>
   <button>Refresh My Mind</button>
   
-  <script>
+  <!-- THIS IS THE SCRIPT TAG AT THE BOTTOM -->
+    <script>
+    const verses = [
+    { 
+        text: '"For though the righteous fall seven times, they rise again."', 
+        ref: '- Proverbs 24:16' 
+    },
+    { 
+        text: '"I can do all things through Christ who strengthens me."', 
+        ref: '- Philippians 4:13' 
+    },
+    { 
+        text: '"The Lord is my shepherd; I shall not want."', 
+        ref: '- Psalm 23:1' 
+    },
+    { 
+        text: '"Be strong and courageous. Do not be afraid."', 
+        ref: '- Joshua 1:9' 
+    },
+    { 
+    text: '"For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you."', 
+    ref: '- Jeremiah 29:11' 
+    },
+    {
+      text: '“Have mercy upon me, O God, According to Your lovingkindness; According to the multitude of Your tender mercies, Blot out my transgressions.”',
+      ref: '- Psalm 51:1'
+    }
+];
+  
     document.querySelector("button").addEventListener("click", function() {
-        alert("Keep standing up, Zadok. You got this.");
-    });
+    const randomIndex = Math.floor(Math.random() * verses.length);
+    
+    // Find both paragraphs on the page
+    const verseElement = document.getElementById("verse-text");
+    const refElement = document.getElementById("verse-ref");
+    
+    // Change the text to the random verse AND reference
+    verseElement.innerText = verses[randomIndex].text;
+    refElement.innerText = verses[randomIndex].ref;
+});
 </script>
 </body>
 

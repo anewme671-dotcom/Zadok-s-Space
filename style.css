@@ -24,6 +24,22 @@ h1 {
     margin-bottom: 5px;
 }
 
+.avatar {
+    width: 70px;
+    height: 70px;
+    background-color: #1a1a1a;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    color: #4CAF50;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 0 15px #4CAF50;
+}
+
+
 /* 4. The Verse Box */
 .quote-box {
     background-color: #2a2a2a;
@@ -51,4 +67,13 @@ button {
     font-weight: bold;
     width: 100%;
     margin-top: 25px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98);
 }

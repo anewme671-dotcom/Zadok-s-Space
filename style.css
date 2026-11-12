@@ -1,0 +1,54 @@
+/* 1. The Reset (removes default browser spacing) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. The Body (dark background, white text) */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px; /* This gives breathing room around the edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* 3. The Name */
+h1 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* 4. The Verse Box */
+.quote-box {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-left: 4px solid #4CAF50;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.about-text {
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+/* 5. The Button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 25px;
+}
